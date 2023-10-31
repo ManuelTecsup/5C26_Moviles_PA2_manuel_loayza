@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private Blade blade;
     private Spawner spawner;
 
-    private int score;
+    public PlayerData playerData;
 
     private void Awake()
     {
@@ -32,8 +32,8 @@ public class GameManager : MonoBehaviour
         blade.enabled = true;
         spawner.enabled = true;
 
-        score = 0;
-        scoreText.text = score.ToString();
+        playerData.score = 0;
+        scoreText.text = playerData.score.ToString();
     }
 
     private void ClearScene()
@@ -53,8 +53,8 @@ public class GameManager : MonoBehaviour
 
     public void IncreaseScore(int points)
     {
-        score += points;
-        scoreText.text = score.ToString();
+        playerData.score += points;
+        scoreText.text = playerData.score.ToString();
     }
 
     public void Explode()
@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(1f);
 
-        NewGame();
+        //NewGame();
 
         elapsed = 0f;
 

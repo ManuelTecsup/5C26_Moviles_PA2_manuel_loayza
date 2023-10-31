@@ -43,8 +43,9 @@ public class Spawner : MonoBehaviour
         while (enabled)
         {
             GameObject prefab = fruit_base_prefab;
-
+            bool bomba_ = false;
             if (Random.value < bombChance) {
+                bomba_ = true;
                 prefab = bombPrefab;
             }
 
@@ -57,21 +58,23 @@ public class Spawner : MonoBehaviour
 
             GameObject fruit = Instantiate(prefab, position, rotation);
             int random_ = Random.Range(0, fruitPrefabs.Length);
+            if (bomba_ == false)
+            {
+                Material[] materiales = new Material[2];
+                materiales[0] = fruitPrefabs[random_].material_outside;
+                materiales[1] = fruitPrefabs[random_].material_inside;
 
-            Material[] materiales = new Material[2];
-            materiales[0] = fruitPrefabs[random_].material_outside;
-            materiales[1] = fruitPrefabs[random_].material_inside;
+                fruit.GetComponent<Fruit>().whole.GetComponent<Renderer>().material = materiales[0];
 
-            fruit.GetComponent<Fruit>().whole.GetComponent<Renderer>().material = materiales[0];
-           
-            fruit.GetComponent<Fruit>().sliced_bottom.GetComponent<Renderer>().materials = materiales;
+                fruit.GetComponent<Fruit>().sliced_bottom.GetComponent<Renderer>().materials = materiales;
 
-            fruit.GetComponent<Fruit>().sliced_top.GetComponent<Renderer>().materials = materiales;
+                fruit.GetComponent<Fruit>().sliced_top.GetComponent<Renderer>().materials = materiales;
+            }
             Destroy(fruit, maxLifetime);
 
             float force = Random.Range(minForce, maxForce);
             fruit.GetComponent<Rigidbody>().AddForce(fruit.transform.up * force, ForceMode.Impulse);
-
+            bomba_ = false;
             yield return new WaitForSeconds(Random.Range(minSpawnDelay, maxSpawnDelay));
         }
     }

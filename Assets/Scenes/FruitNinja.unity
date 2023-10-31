@@ -181,7 +181,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -728,6 +728,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 860532809}
   fadeImage: {fileID: 1744158372}
+  playerData: {fileID: 11400000, guid: a8cc2015c18a9e442af758dbe23ef8e7, type: 2}
 --- !u!1 &1744158370
 GameObject:
   m_ObjectHideFlags: 0
