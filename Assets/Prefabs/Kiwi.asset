@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32166c11188300647b2bda0caa125f29, type: 3}
   m_Name: Kiwi
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 8e50694855f8bc948a4d139463a681f5, type: 2}
+  material_outside: {fileID: 2100000, guid: 8e50694855f8bc948a4d139463a681f5, type: 2}
+  material_inside: {fileID: 2100000, guid: 00e90ea53976cd247b7059f99d5fdc9f, type: 2}

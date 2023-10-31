@@ -57,7 +57,15 @@ public class Spawner : MonoBehaviour
 
             GameObject fruit = Instantiate(prefab, position, rotation);
             int random_ = Random.Range(0, fruitPrefabs.Length);
-            fruit.GetComponent<Fruit>().whole.GetComponent<Renderer>().material = fruitPrefabs[random_].material;
+            fruit.GetComponent<Fruit>().whole.GetComponent<Renderer>().material = fruitPrefabs[random_].material_outside;
+            Material[] materiales = new Material[2];
+            materiales[0]= fruitPrefabs[random_].material_outside;
+            materiales[1] = fruitPrefabs[random_].material_inside;
+            
+            fruit.GetComponent<Fruit>().sliced_bottom.GetComponent<Renderer>().materials = materiales;
+
+
+            fruit.GetComponent<Fruit>().sliced_top.GetComponent<Renderer>().materials = materiales;
             Destroy(fruit, maxLifetime);
 
             float force = Random.Range(minForce, maxForce);

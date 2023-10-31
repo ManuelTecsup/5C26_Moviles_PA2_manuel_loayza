@@ -4,6 +4,8 @@ public class Fruit : MonoBehaviour
 {
     public GameObject whole;
     public GameObject sliced;
+    public GameObject sliced_bottom;
+    public GameObject sliced_top;
 
     private Rigidbody fruitRigidbody;
     private Collider fruitCollider;

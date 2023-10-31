@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32166c11188300647b2bda0caa125f29, type: 3}
   m_Name: Watermelon
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 287057919f5f9e34ea00712865d26b1d, type: 2}
+  material_outside: {fileID: 2100000, guid: 287057919f5f9e34ea00712865d26b1d, type: 2}
+  material_inside: {fileID: 2100000, guid: ab4bead6eb712bc45acee70c9dd4c2c6, type: 2}

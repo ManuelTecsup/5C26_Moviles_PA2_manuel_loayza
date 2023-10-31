@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "FruitSO", menuName = "ScriptableObjects/FruitSO")]
 public class FruitSO : ScriptableObject
 {
-    public Material material;
+    public Material material_outside;
+    public Material material_inside;
     
 }
