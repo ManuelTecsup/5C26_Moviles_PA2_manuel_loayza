@@ -33,14 +33,21 @@ public class Blade : MonoBehaviour
 
     private void Update()
     {
-        
-       
-        if (Input.GetTouch(0).phase == TouchPhase.Began) {
-            StartSlice();
-        } else if (Input.GetTouch(0).phase == TouchPhase.Ended) {
-            StopSlice();
-        } else if (slicing) {
-            ContinueSlice();
+
+        if (Input.touchCount > 0)
+        {
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                StartSlice();
+            }
+            else if (Input.GetTouch(0).phase == TouchPhase.Ended)
+            {
+                StopSlice();
+            }
+            else if (slicing)
+            {
+                ContinueSlice();
+            }
         }
     }
 

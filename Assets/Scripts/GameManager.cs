@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public Text scoreText;
@@ -98,6 +98,8 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+        SceneManager.LoadScene("Results");
+
     }
 
 }
