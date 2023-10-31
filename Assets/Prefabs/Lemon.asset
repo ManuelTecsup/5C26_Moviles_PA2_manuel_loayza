@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32166c11188300647b2bda0caa125f29, type: 3}
   m_Name: Lemon
   m_EditorClassIdentifier: 
-  material: {fileID: 0}
+  material: {fileID: 2100000, guid: caf01cd79a66c054ab093d537fdc6ff0, type: 2}
